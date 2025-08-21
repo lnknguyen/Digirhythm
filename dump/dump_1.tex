@@ -1,0 +1,335 @@
+%Version 3 December 2023
+% See section 11 of the User Manual for version history
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%\documentclass[referee,sn-basic]{sn-jnl}% referee option is meant for double line spacing
+
+%%=======================================================%%
+%% to print line numbers in the margin use lineno option %%
+%%=======================================================%%
+
+%%\documentclass[lineno,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+%%======================================================%%
+%% to compile with pdflatex/xelatex use pdflatex option %%
+%%======================================================%%
+
+%%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+
+%%Note: the following reference styles support Namedate and Numbered referencing. By default the style follows the most common style. To switch between the options you can add or remove Numbered in the optional parenthesis. 
+%%The option is available for: sn-basic.bst, sn-vancouver.bst, sn-chicago.bst%  
+ 
+%%\documentclass[pdflatex,sn-nature]{sn-jnl}% Style for submissions to Nature Portfolio journals
+%%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+%%\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}% Math and Physical Sciences Numbered Reference Style 
+%%\documentclass[pdflatex,sn-mathphys-ay]{sn-jnl}% Math and Physical Sciences Author Year Reference Style
+%%\documentclass[pdflatex,sn-aps]{sn-jnl}% American Physical Society (APS) Reference Style
+\documentclass[pdflatex,sn-vancouver,Numbered]{bst/sn-jnl}% Vancouver Reference Style
+%%\documentclass[pdflatex,sn-apa]{sn-jnl}% APA Reference Style 
+%%\documentclass[pdflatex,sn-chicago]{sn-jnl}% Chicago-based Humanities Reference Style
+
+%%%% Standard Packages
+%%<additional latex packages if required can be included here>
+
+\usepackage{graphicx}%
+\usepackage{multirow}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsthm}%
+\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+\usepackage{listings}%
+\usepackage{booktabs}
+\usepackage[graphicx]{realboxes}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{subcaption}
+%%%%
+
+%%%%%=============================================================================%%%%
+%%%%  Remarks: This template is provided to aid authors with the preparation
+%%%%  of original research articles intended for submission to journals published 
+%%%%  by Springer Nature. The guidance has been prepared in partnership with 
+%%%%  production teams to conform to Springer Nature technical requirements. 
+%%%%  Editorial and presentation requirements differ among journal portfolios and 
+%%%%  research disciplines. You may find sections in this template are irrelevant 
+%%%%  to your work and are empowered to omit any such section if allowed by the 
+%%%%  journal you intend to submit to. The submission guidelines and policies 
+%%%%  of the journal take precedence. A detailed User Manual is available in the 
+%%%%  template package for technical guidance.
+%%%%%=============================================================================%%%%
+
+%% as per the requirement new theorem styles can be included as shown below
+\theoremstyle{thmstyleone}%
+\newtheorem{theorem}{Theorem}%  meant for continuous numbers
+%%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
+%% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition
+\newtheorem{proposition}[theorem]{Proposition}% 
+%%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc.
+
+\theoremstyle{thmstyletwo}%
+\newtheorem{example}{Example}%
+\newtheorem{remark}{Remark}%
+
+\theoremstyle{thmstylethree}%
+\newtheorem{definition}{Definition}%
+
+\raggedbottom
+%%\unnumbered% uncomment this for unnumbered level heads
+
+\begin{document}
+
+\title[Article Title]{Regularity of life rhythms}
+
+%%=============================================================%%
+%% GivenName	-> \fnm{Joergen W.}
+%% Particle	-> \spfx{van der} -> surname prefix
+%% FamilyName	-> \sur{Ploeg}
+%% Suffix	-> \sfx{IV}
+%% \author*[1,2]{\fnm{Joergen W.} \spfx{van der} \sur{Ploeg} 
+%%  \sfx{IV}}\email{iauthor@gmail.com}
+%%=============================================================%%
+
+\author*[1]{\fnm{Nguyen} \sur{Luong}}\email{nguyen.luong@aalto.fi}
+
+
+\author[1]{\fnm{Talayeh} \sur{Aledavood}}\email{talayeh.aledavood@aalto.fi}
+
+
+\affil*[1]{\orgdiv{Computer Science}, \orgname{Aalto University} \city{Espoo}, \country{Finland}}
+
+%%==================================%%
+%% Sample for unstructured abstract %%
+%%==================================%%
+
+\abstract{}
+
+\keywords{}
+
+
+\maketitle
+
+Terminologies:
+
+Rhythm regularity
+
+Behavioral anomalies
+
+Population/Sub-population
+
+\section{Introduction}\label{sec1}
+
+Humans' daily lives are structured around a 24-hour day-night cycle, encompassing essential physiological and behavioural routines such as sleep, physical activities, communication, and mobility. These rhythms, synchronized with the natural day-night cycle, are critical for health, promoting well-being \cite{heintzelman2019routines}, life satisfaction \cite{margraf2016social}, and sleep quality \cite{carney2006daily}. 
+
+%On the other hand, deviations from life rhythms such as irregular sleep patterns, can lead to serious health issues including metabolic disorders  \cite{zuraikat2020sleep}, mental health challenges \cite{bernert2017objectively}, and cognitive decline \cite{kuula2018naturally}.
+
+
+Considering the important role of regular life rhythms in health, the past decades have seen significant advancements in how we measure them. Research into the quantification of life rhythms and their regularity outside a lab-controlled environment has been ongoing since the early 1990s  \cite{monk1990social, monk1994regularity, buysse1989pittsburgh}. Although traditional methods such as pen-and-paper surveys can provide an effective means of quantifying life rhythms, they often become burdensome and less reliable as studies progress [cite]. Today, the widespread adoption of personal digital devices offers a novel solution to this issue. Individuals now spend approximately five hours daily on their mobile phones on average \cite{datareportal2024digital}, offering researchers a fine-grain and nonintrusive data source to analyze human behavior over a long period of time. 
+
+Humans adhere to highly regular rhythms. At the population level, digital temporal rhythms manifest in day-night and weekday-weekend cycles. These patterns are evident in various modalities, such as phone use \citep{aledavood2022quantifying}, mobility \citep{ahas2010daily, song2010limits}, and communication \citep{aledavoodDigitalDailyCycles2015}. Aledavood et al. \citep{aledavoodDailyRhythmsMobile2015a} demonstrated that the communication rhythms of individuals are distinctive and tend to persist over time despite major turnover in their personal networks. Similarly, mobility patterns also show a high level of predictability of up to 93\% \citep{song2010limits}. Not only in physical spaces but also online, individual routines are remarkably predictable; Kulshrestha et al. \citep{kulshrestha2021web} found that web browsing behaviour can be predicted with an accuracy of 85\% on average, with women displaying more regularity than men. With regards to the rhythms of physical activities, Luong et al. \citep{luong2023impact} showed that physical activity patterns of individuals tend to be more consistent in the short term (i.e., across consecutive days) than in the long term (i.e., over a year). Additionally, this regularity exhibits variation depending on the individual's ethnic background and living arrangements. 
+
+Recent research has advanced from unimodal rhythms to multimodal rhythms, integrating data from multiple behavioral domains to provide more comprehensive insights into individual patterns. \cite{wang2018sensing} inferred the variability of 5 sensed behaviors and found correlations between the within-person variability features and the self-reported personality traits. \cite{amon2022flexibility} used wearable sensors to assess health behavior regularity and found that greater routineness was linked to higher neuroticism and lower agreeableness, independent of health levels and demographics. From a cohort of schizophrenia patients, He-Yueya et. al. \cite{he-yueyaAssessingRelationshipRoutine2020} developed the Stability Index to measure behavioral stability and found that stable social activity correlated with lower symptoms, while stable physical inactivity correlated with elevated symptoms. Similarly, in a cohort of schizophrenia patients, \cite{zhou2022predicting} found routines can be found in clusters, and features extracted from these clusters can be used to predict relapse. 
+
+
+\begin{enumerate}
+    \item 
+    \item Personality traits associated with regularity of rhythms
+\end{enumerate}
+
+\section{Methods}\label{sec2}
+
+\subsection*{Dataset description}
+
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{ccccc}
+         &  MoMo&  DTU&  Tesserae &GLOBEM \\
+         Num. participants & 122  & 790 & 772 & 137 \\
+         Cohort & Control+patients & College student  & Informatic worker & College student \\
+         Avg. days in study & 168.9 & 277.9 & 316.2  & 65.8 \\
+         &  &  &  & \\
+    \end{tabular}
+    \caption{Cohort description (after filtering).}
+    \label{tab:my_label}
+\end{table}
+
+\subsection*{Passive data}
+
+All the features were extracted using the Niimpy framework \cite{ikaheimonen2023niimpy}. 
+
+\textbf{Phone usage:} From screen interaction, we determined the duration of screen use in each day. We further binned the features into 4 time bins, NMAE. 
+
+\textbf{Sleep:} Sleep duration was inferred as the longest inactivity period of phone use \cite{aledavood2022quantifying}. The beginning and ending of the period was considered sleep onset and sleep offset. We further reduced sleep timing to midsleep, i.e the midpoint between sleep onset and offset.
+
+\subsubsection*{Exclusion criteria} Days with at least one missing features were excluded. Participants with more than 4 weeks (28 days) of data were retained to ensure a long enough time frame to capture changes in behaviour. All features used in this work were within-subject z-standardized, to ensure that each feature contribute equally to baseline rhythm calculation.
+
+%\input{tables/sensor_list}
+
+\subsection*{Active data}
+
+\textbf{Personalities: } Measured using Finnish NEO questionnaire (MOMO) and Big-Five Invetory (all others).
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{0_desc.png}
+    \caption{Feature distribution of all studies}
+    \label{fig:enter-label}
+\end{figure}
+
+
+
+\subsubsection*{Baseline behaviour and behavioural anomalies detection}\label{sec2.2.1}
+
+\begin{algorithm}
+\caption{Find optimal segment with maximum Similarity Index}\label{alg:max_similarity}
+\begin{algorithmic}
+\Require For each subject, a daily behavior data matrix $B$ of size $N \times K$
+\Ensure Optimal segment start $d_{\text{max}}$ and maximum similarity index $\text{maxSI}$
+
+\State z-standardize daily behavior data to construct matrix $B$ of size $N \times K$
+\State Initialize similarity matrix $S$ of size $N \times N$
+
+\For{$i := 1$ to $N$}
+    \For{$j := 1$ to $N$}
+        \If{$i \neq j$}
+            \State Calculate $S_{ij} := \left[ 1 + \sqrt{\sum_{k=1}^K (B_{ik} - B_{jk})^2} \right]^{-1}$
+        \EndIf
+    \EndFor
+\EndFor
+
+\State $\text{maxSI} \gets -\infty$
+\For{$d := 1$ to $(N - L + 1)$}
+    \State Define $W_d := \{ S_{ij} \mid i, j \in [d, d+L] \text{ and } i \neq j \}$
+    \State $SI_d \gets \text{median}(W_d)$
+
+    \If{$SI_d > \text{maxSI}$}
+        \State $\text{maxSI} \gets SI_d$
+        \State $d_{\text{max}} \gets d$
+    \EndIf
+\EndFor
+
+\State \Return $d_{\text{max}}, \text{maxSI}$
+\end{algorithmic}
+\end{algorithm}
+
+\subsection*{Denotations:}
+\begin{itemize}
+    \item \( N \): number of days.
+    \item \( K \): number of features.
+    \item \( S \): similarity matrix of size \( N \times N \).
+    \item \( B \): normalized daily behaviour matrix of size \( N \times K \).
+    \item \( W_d \): set of similarity scores within window \( d \).
+    \item \( SI_d \): Stability Index for window \( d \).
+    \item \( d_{\text{max}} \): window \( d \) with the highest Stability Index \( SI_d \).
+\end{itemize}
+
+Two things we learn from the consistency of behaviours. First, the consistency of one's routine can be seen as how similar each day's routine are compared to baseline. Second, we can identify anomalies of behaviours by assessing how similar each day is to the baseline. To achieve this, we construct similarity of each day against the baseline. Anomalies are detected as days lying further than 1.5x of the lower std from the mean.
+
+\section*{Results}\label{sec3}  
+
+\subsection{Algorithm comparison}
+
+Bland-Altman plot to compare baseline 
+from different algorithm
+\subsection{RQ1: Demographic factors predict consistency of routine}
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}} lcccc}
+         & \textbf{MoMo}  & \textbf{DTU}  & \textbf{Tesserae} & \textbf{Globem (wave 1)} \\
+        \hline
+        \textbf{Age} & -  &  &  &  \\
+        \textbf{Gender} & - &  &  &  \\
+        \textbf{Work (unemployed)} &  &  &  &  \\
+        \textbf{Have children (no)} & - &  &  &  \\
+        \hline
+    \end{tabular*}
+    \caption{Demographic predicts regularity}
+    \label{tab:my_label}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}} lcccc}
+         & \textbf{MoMo}  & \textbf{DTU}  & \textbf{Tesserae} & \textbf{Globem (wave 1)} \\
+        \hline
+        \textbf{Extroversion} & -  &  &  & - \\
+        \textbf{Agreeableness} & - &  &  & - \\
+        \textbf{Openness} & - &  &  & - \\
+        \textbf{Conscientiousness} & - &  &  & - \\
+        \textbf{Neuroticism} & - &  & & negative \\
+        \hline
+    \end{tabular*}
+    \caption{Regularity predicts personality}
+    \label{tab:my_label}
+\end{table}
+
+- Medium similarity between days and baseline - People do not adhere to a single routine, but rather multiple.
+
+\subsection*{RQ2: Cluster of outliers - Characteristics}
+
+Step:
+
+1) Find days furthest from baseline 
+
+2) Kmean
+
+3) Post-hoc test against baseline: diff in mean and whether diff is statistically significant
+
+4) Consistency of changes?
+
+\section*{Discussions}\label{sec4}  
+
+\subsection{Limitations}\label{sec4.2}  
+Operating on the concept of one baseline rhythms, we may miss out on other rhythms that typically arise on special occasions, i.e holidays.
+
+\section*{Conclusion}\label{sec5}  
+
+\section{Appendices}
+\begin{appendices}
+
+
+\textbf{corona:} 128 employees from a university in Finland participated in this study during the late stage of the COVID-19 pandemic (June 2021 - June 2022). Each was assigned a Polar Ignite fitness tracker. Baseline questionnaire assess stress, anxiety, sleep quality, positive negative affects, chronotype. Monthly questionnaire assesses wellbeing. Detailed procedure and participants selections are describe in a previous study \cite{luong2023impact}.
+
+
+\subsection*{Preprocessing fitness tracker data}
+
+\textbf{Sleep:} For each night, bedtime, waketime, and total interruption (seconds) were gathered from polar api. We derived two features: (1) Total Sleep Time (TST), calculated as the interval between bedtime and wake time, minus the interruption duration, and (2) Mid-Sleep Point (MS) representing sleep timing, computed as (bedtime + TST) / 2. 
+
+\textbf{Activity:} Step count was collected at the hourly interval. Consistent to previous studies on temporal rhythms \cite{luong2023impact, aledavoodDigitalDailyCycles2015, aledavoodDailyRhythmsMobile2015a}, we quantified the temporal patterns of activity by aggregating the hourly step counts into four distinct 6-hour intervals, representing night (00:00 AM -06:00 AM), morning (06:00 AM -12:00 PM), afternoon (12:00 PM -06:00 PM), and evening segments (06:00 PM - 00:00 AM), and then normalized these values by the total step count to obtain the temporal distribution. In addition, we summed up the step counts of each day to gain a volume measure.
+
+\textbf{Heart rate:} Heart rate variablity (HRV) of each night of sleep was obtained from fitness tracker.
+
+
+\end{appendices}
+
+%%===========================================================================================%%
+%% If you are submitting to one of the Nature Portfolio journals, using the eJP submission   %%
+%% system, please include the references within the manuscript file itself. You may do this  %%
+%% by copying the reference list from your .bbl file, paste it into the main manuscript .tex %%
+%% file, and delete the associated \verb+\bibliography+ commands.                            %%
+%%===========================================================================================%%
+
+\bibliography{sn-bibliography}% common bib file
+%% if required, the content of .bbl file can be included here once bbl is generated
+%%\input sn-article.bbl
+
+
+\end{document}

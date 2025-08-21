@@ -1,0 +1,19 @@
+
+\begin{table}[!htpb]
+\centering
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Predictors    & Beta & CI & p-value \\ \midrule
+Age           & .003  & [-.003, .009]   & .301 \\
+Gender (male)      & .011  & [-.002, .024]   & .102 \\
+Origin (native)    & -.015 & [-.030, .001]   & .070 \\
+Occupation (service) & .020  & [.006, .035]    & \textbf{.007**} \\
+Have children (no) & .001  & [-.005, .007]   & .630 \\
+MEQ            & .005  & [-.001, .011]   & .087 \\ \midrule
+Observation  & \multicolumn{3}{c}{115} \\ 
+$R^2$/Adjusted $R^2$ & \multicolumn{3}{c}{.108/.059} \\
+\bottomrule
+\end{tabular}
+\caption{Demographics factor predicting daily rhythm regularity}
+\label{your-table-label}
+\end{table}
