@@ -1,0 +1,31 @@
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{@{}lrrr rrr@{}}
+\toprule
+& \multicolumn{3}{c}{\textbf{$d_{self}$}} & \multicolumn{3}{c}{\textbf{$d_{self\_transition}$}} \\
+\cmidrule(lr){2-4}\cmidrule(l){5-7}
+& \textbf{$\beta$} & \textbf{SE} & \textbf{p-value} & \textbf{$\beta$} & \textbf{SE} & \textbf{p-value} \\
+\midrule
+\textbf{Fixed effects} \\
+Age [25--34]      &  0.001 & 0.011 & 0.968 & -0.014 & 0.005 & 0.228 \\
+Age [35--44]      &  0.011 & 0.012 & 0.458 & -0.030 & 0.006 & 0.134 \\
+Age [45--54]      & -0.005 & 0.015 & 0.793 & -0.016 & 0.001 & \textbf{0.026}* \\
+Age [55--64]      &  0.021 & 0.006 & 0.084\textsuperscript{.} & -0.011 & 0.004 & 0.203 \\
+Gender (Male)     & -0.006 & 0.002 & 0.091\textsuperscript{.} &  0.002 & 0.003 & 0.616 \\
+Openness          & -0.003 & 0.003 & 0.455 &  0.000 & 0.008 & 0.993 \\
+Conscientiousness & -0.005 & 0.006 & 0.482 & -0.002 & 0.004 & 0.742 \\
+Extroversion      & -0.004 & 0.001 & 0.073\textsuperscript{.} &  0.010 & 0.008 & 0.430 \\
+Agreeableness     & -0.003 & 0.003 & 0.371 &  0.004 & 0.002 & 0.368 \\
+Neuroticism       &  0.004 & 0.005 & 0.458 &  0.009 & 0.007 & 0.430 \\
+\midrule
+\textbf{Model info} \\
+
+RMSE              & \multicolumn{3}{c}{0.08} & \multicolumn{3}{c}{0.04} \\
+Adj.\ $R^2$       & \multicolumn{3}{c}{0.33} & \multicolumn{3}{c}{0.02} \\
+\bottomrule
+
+\end{tabular}
+\caption[OLS of routine signatures]{OLS estimates for (i) signature persistence ($d_{\text{self}}$) and (ii) transition signature persistence ($d_{\text{self,transition}}$). All models include study as fixed effects; standard errors are clustered by study. Age is a categorical predictor with $<\!25$ as the reference. \textsuperscript{.}\,$p<.10$, *$p<.05$, **$p<.01$.}
+\label{tab:ols_signature}
+\end{table}
