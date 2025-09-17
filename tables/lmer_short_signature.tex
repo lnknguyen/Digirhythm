@@ -1,0 +1,23 @@
+\begin{table}[htbp]
+\centering
+\caption{Linear mixed-effects model results for short-term $d_{\text{self}}$ and $d_{\text{self}}^{(\text{trans})}$. }
+\label{tab:lmer_short_signature_min}
+\begin{tabular}{lcccccc}
+\toprule
+& \multicolumn{3}{c}{$d_{\text{self}}$} & \multicolumn{3}{c}{$d_{\text{self}}^{(\text{trans})}$} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Predictors & Estimate & 95\% CI & $p$ & Estimate & 95\% CI & $p$ \\
+\midrule
+Extraversion           & 0.011   & $-0.001$--$0.023$ & 0.064 & $-0.006$ & $-0.018$--$0.005$ & 0.288 \\
+Agreeableness          & $-0.003$& $-0.017$--$0.010$ & 0.625 & $-0.004$ & $-0.018$--$0.010$ & 0.546 \\
+Conscientiousness      & 0.008   & $-0.004$--$0.021$ & 0.196 & 0.015    & $0.002$--$0.027$  & \textbf{0.025} \\
+Neuroticism            & 0.002   & $-0.010$--$0.014$ & 0.713 & 0.010    & $-0.002$--$0.022$ & 0.100 \\
+Openness               & $-0.004$& $-0.017$--$0.009$ & 0.540 & $-0.006$ & $-0.019$--$0.007$ & 0.389 \\
+Gender [Male]          & 0.013   & $-0.011$--$0.037$ & 0.303 & $-0.002$ & $-0.025$--$0.022$ & 0.900 \\
+Age                    & 0.006   & $-0.003$--$0.016$ & 0.191 & $-0.007$ & $-0.016$--$0.003$ & 0.171 \\
+\midrule
+Observations           & \multicolumn{3}{c}{186} & \multicolumn{3}{c}{186} \\
+$R^2$ (marg./cond.)    & \multicolumn{3}{c}{0.045 / 0.123} & \multicolumn{3}{c}{0.069 / 0.069} \\
+\bottomrule
+\end{tabular}
+\end{table}
