@@ -242,13 +242,13 @@ We used datasets gathered from three multisensor, longitudinal studies. An overv
 
 \textbf{Tesserae.} The Tesserae study recruited 757 information workers across the United States \cite{mattingly2019tesserae}. Participants were provided a Garmin Vivosmart 3 wristband to monitor mobility, heart rate, sleep, and calories. Additionally, participants installed a custom smartphone app that passively tracked screen activity, data usage, charging behavior, location, and other phone states.
 
-\textbf{MoMo-Mood.} The MoMo-Mood study involved patients diagnosed with major depressive episodes, including Major Depressive Disorder (MDD), Bipolar Disorder (BD), and Borderline Personality Disorder (BPD), as well as healthy controls (HC). The study recruited a total of 164 participants from Finland; 133 patients and 31 HCs \cite{aledavood2025multimodal}. Data were collected over a one-year period from smartphones using the AWARE platform \cite{ferreiraAWAREMobileContext2015}, which tracked screen activity, calls and SMS, charging behavior, location, and accelerometer.
+\textbf{MoMo-Mood.} The MoMo-Mood study involved patients diagnosed with major depressive episodes, including Major Depressive Disorder (MDD), Bipolar Disorder (BD), and Borderline Personality Disorder (BPD), as well as healthy controls (HC). The study recruited a total of 164 participants from Finland: 133 patients and 31 HCs \cite{aledavood2025multimodal}. Data were collected over a one-year period from smartphones using the AWARE platform \cite{ferreiraAWAREMobileContext2015}, which tracked screen activity, calls and SMS, charging behavior, location, and accelerometer.
 
 \textbf{GLOBEM.} The GLOBEM study procured a multi-year passive sensing datasets of over 700 user-years of data from 497 unique college students \cite{xu2022globem}. Longitudinal data, including location, phone usage, calls, Bluetooth, mobility, and sleep behavior, were collected from a mobile app and fitness trackers. The study spanned four years, with data collection occurring over a 10-week period each year, primarily during the spring semester. 
 
 \subsection*{Features extraction and Preprocessing} \label{sec:methods:features_extraction}  
 
-\textbf{Sleep.} Bed time, wake time, and sleep duration were collected directly from Garmin (Tesserae) and Fitbit (GLOBEM) fitness trackers. In MoMo-Mood, due to the lack of wearable devices, sleep was estimated using phone lock/unlock status, with the longest lock episode considered sleep. To assess the validity of this proxy, sleep parameters from the same participants were compared to those derived from actigraphy during a two-week validation phase . The comparison revealed a slight bias but demonstrated adequate correlation between the two methods.
+\textbf{Sleep.} Bed time, wake time, and sleep duration were collected directly from Garmin (Tesserae) and Fitbit (GLOBEM) fitness trackers. In MoMo-Mood, due to the lack of wearable devices, sleep was estimated using phone lock/unlock status, with the longest lock episode considered sleep. To assess the validity of this proxy, sleep parameters from the same participants were compared to those derived from actigraphy during a two-week validation phase. The comparison revealed a slight bias but demonstrated adequate correlation between the two methods.
 
 \textbf{Mobility.} This routine was measured using step count data collected from fitness trackers in the Tesserae and GLOBEM studies. In MoMo-Mood, due to the lack of fitness trackers, mobility was estimated using the standard deviation of the accelerometer magnitude \cite{ravi2005activity}. Accelerometer readings displayed a clear 24-hour rhythm, consisting of higher activity levels during the day, a peak around a specific hour, and a gradual decline toward the end of the day. To capture daily activities pattern, activity readings were aggregated into four 6-hour time bins as proxy for four parts of the day (night, morning, afternoon, evening). A daily average value was also computed.
 
@@ -348,8 +348,7 @@ where $\sigma_1$ and $\sigma_1$ are the social signatures defined in Eq. 1, and 
 To determine how well one maintains their routines over time, we define $d_{self} =  d_{12}$. We validate individual's persistence against the population, by computing the reference distance $d_{ref} = \frac{1}{2}* (d_{i1j1} + d_{i2j2} )$. That is, we compute the routine signature in each time split of individual $i$ against that from the same time split of individual $j$.
 
 
-% Uncomment to include appendix
-\input{appendix}
+
 
 %%===========================================================================================%%
 %% If you are submitting to one of the Nature Portfolio journals, using the eJP submission   %%
@@ -362,5 +361,8 @@ To determine how well one maintains their routines over time, we define $d_{self
 %% if required, the content of .bbl file can be included here once bbl is generated
 %%\input sn-article.bbl
 
+\clearpage
+% Uncomment to include appendix
+\input{appendix}
 
 \end{document}
